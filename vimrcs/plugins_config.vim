@@ -43,4 +43,24 @@ noremap <C-p> :MySearchFinder<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UniteGrep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gg :Unite grep:.::
+" Use ag in unite grep source. 
+let g:unite_source_grep_command ='ag'
+let g:unite_source_grep_default_opts = '--nocolor --nogroup --ignore-case --ignore log'            
+let g:unite_source_grep_recursive_opt = ''
+map <leader>gg :Unite grep:.::<CR>
+
+" shortcut
+vnoremap <silent> gs :call SearchSelection('gs', '')<CR>
+function! SearchSelection(direction, extra_filter) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", ' ')
+
+    if a:direction == 'gs'
+        exe "Unite grep:.:-Q:" . l:pattern
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
