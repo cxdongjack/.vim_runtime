@@ -12,7 +12,8 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry' > ~/.vimrc
 
-cd ~/.vim_runtime/sources_non_foked/vimproc.vim/
+# 编译
+cd ~/.vim_runtime/sources_non_forked/vimproc.vim/
 make
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
