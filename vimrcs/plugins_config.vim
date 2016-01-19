@@ -22,7 +22,8 @@ let g:NERDTreeWinSize=35
 "map <leader>nn :NERDTreeToggle<cr>
 "map <leader>nb :NERDTreeFromBookmark 
 "map <leader>nf :NERDTreeFind<cr>
-map <leader>f :NERDTreeFind<cr>
+map <leader>tt :NERDTreeToggle<cr>
+map <leader>tf :NERDTreeFind<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NeoCompeteSnippet

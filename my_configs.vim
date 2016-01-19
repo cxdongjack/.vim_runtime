@@ -1,4 +1,5 @@
 set nu
+set mouse= 
 
 " Add a bit extra margin to the left
 set foldcolumn=0
