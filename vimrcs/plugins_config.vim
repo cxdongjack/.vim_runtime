@@ -6,11 +6,48 @@
 
 
 """"""""""""""""""""""""""""""
-" => Load pathogen paths
+" => Load NeoBundle
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/.vim_runtime/sources_forked/{}')
-call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
-call pathogen#helptags()
+let neobundle_readme=expand('~/.vim_runtime/bundle/neobundle.vim/README.md')
+if !filereadable(neobundle_readme)
+    echo "Installing NeoBundle..."
+    echo ""
+    silent !mkdir -p ~/.vim_runtime/bundle
+    silent !git clone https://github.com/Shougo/neobundle.vim.git ~/.vim_runtime/bundle/neobundle.vim
+endif
+
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=~/.vim_runtime/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim_runtime/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Let NeoBundle manage local plugin
+call neobundle#local('~/.vim_runtime/sources_forked', {})
+call neobundle#local('~/.vim_runtime/sources_non_forked', {})
+
+" Add or remove your Bundles here:
+"NeoBundle 'Shougo/neosnippet.vim'
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
