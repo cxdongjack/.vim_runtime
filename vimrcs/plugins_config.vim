@@ -65,3 +65,14 @@ function! SearchSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => js beautify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" or
+autocmd FileType javascript noremap <buffer>  <leader>ft :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <leader>ft :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <leader>ft :call CSSBeautify()<cr>
