@@ -36,9 +36,10 @@ com! -nargs=0 MySearchFinder call MySearchFinder()
 
 " Unite
 " 模糊匹配
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
+ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " 模糊匹配排序
 " call unite#filters#sorter_default#use(['sorter_rank'])
+ call unite#filters#sorter_default#use(['sorter_selecta'])
 
 " Like ctrlp.vim settings.
 call unite#custom#profile('default', 'context', {
