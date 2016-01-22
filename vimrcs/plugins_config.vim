@@ -8,6 +8,10 @@
 """"""""""""""""""""""""""""""
 " => Load NeoBundle
 """"""""""""""""""""""""""""""
+"call pathogen#infect('~/.vim_runtime/sources_forked/{}')
+"call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
+"call pathogen#helptags()
+
 let neobundle_readme=expand('~/.vim_runtime/bundle/neobundle.vim/README.md')
 if !filereadable(neobundle_readme)
     echo "Installing NeoBundle..."
@@ -38,6 +42,7 @@ call neobundle#local('~/.vim_runtime/sources_non_forked', {})
 
 " Add or remove your Bundles here:
 "NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'docunext/closetag.vim'
 
 " Required:
 call neobundle#end()
