@@ -1,5 +1,6 @@
 set nu
 set mouse= 
+inoremap jk <esc>
 
 " Add a bit extra margin to the left
 set foldcolumn=0
@@ -16,3 +17,4 @@ autocmd BufEnter * :exe "cd".FindGitRoot(bufname("%"))
 " Switch CWD to the directory of the open buffer
 " map <leader>cg :exe "cd".FindGitRoot(bufname("%"))<cr>
 
+map <leader>bb :execute 'Unite bookmark'<cr>
