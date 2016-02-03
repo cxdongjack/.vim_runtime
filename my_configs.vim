@@ -18,3 +18,5 @@ autocmd BufEnter * :exe "cd".FindGitRoot(bufname("%"))
 " map <leader>cg :exe "cd".FindGitRoot(bufname("%"))<cr>
 
 map <leader>bb :execute 'Unite bookmark'<cr>
+
+nmap <leader>tg :!(bash gen-tags.sh)<cr>
