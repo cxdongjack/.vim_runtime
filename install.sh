@@ -12,6 +12,10 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry' > ~/.vimrc
 
+# init tmux
+mv ~/.tmux.conf ~/.tmux.conf_back
+cp .tmux.conf ~/.tmux.conf
+
 # compile vimproc
 cd ~/.vim_runtime/sources_non_forked/vimproc.vim/
 make
