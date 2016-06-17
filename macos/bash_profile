@@ -1,0 +1,17 @@
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
+# brew install git && brew install bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+# ./PS1-color.README
+# __git_ps1 from git-prompt.sh supply by bash_completion
+PS1='\W$(__git_ps1 "\[\033[01;36m\](%s)\[\033[00m\]") \$ '
+
+export NVM_DIR="/Users/chenxiaodong/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

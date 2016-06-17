@@ -1,0 +1,12 @@
+# install homebrew
+
+# install git
+brew install git
+
+# install nvm toinstall node.js
+nvm install stable
+nvm use stable
+
+# clone .vim_runtime
+./install
+cd macos && ./install.sh

@@ -21,6 +21,6 @@ cd ~/.vim_runtime/sources_non_forked/vimproc.vim/
 make
 
 # install silversearcher
-sudo apt-get install silversearcher-ag
+#sudo apt-get install silversearcher-ag
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"

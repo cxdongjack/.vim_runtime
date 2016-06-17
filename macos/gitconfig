@@ -1,0 +1,13 @@
+[alias]
+	s = status
+	ck = checkout
+	cb = checkout -b
+	cm = commit --verbose
+	cam = commit --verbose -a 
+	br = branch
+	ps = push
+[core]
+	editor = vim
+[user]
+	name = chenxiaodong
+	email = cxdongjack@163.com
