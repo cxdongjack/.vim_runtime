@@ -1,0 +1,6 @@
+*/deploy/*
+*/temp/*
+tags
+*_build/*
+template.js
+*.map
