@@ -5,7 +5,7 @@
 "au FileType javascript setl fen
 "au FileType javascript setl nocindent
 
-au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
+au FileType javascript inoremap <buffer> /-  //--- PH ----------------------------------------------<esc>FP2xi
 
 function! JavaScriptFold() 
     setl foldmethod=syntax

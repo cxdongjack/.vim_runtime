@@ -13,7 +13,7 @@ endfunction
 map <Leader>vg :call VimuxGoToRoot()<CR>
 
 " Run the current file with rspec
-map <Leader>vc :call VimuxRunCommand("cd " . FindMyDirectory(bufname("%")))<CR>
+map <Leader>vc :call VimuxRunCommand("cd " . unite#util#path2directory(bufname("%")))<CR>
 
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>

@@ -30,7 +30,8 @@ function! MySearchFinder()
     "let buffername = unite#helper#get_buffer_directory(bufnr('%'))
     "let gitpath = FindGitRoot(buffername)
     "execute 'cd '.gitpath
-    execute 'Unite -start-insert buffer file_rec'
+    "execute 'Unite -start-insert buffer file_rec'
+    execute 'Unite buffer'
 endfunction    
 com! -nargs=0 MySearchFinder call MySearchFinder()
 
