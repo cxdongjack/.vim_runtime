@@ -6,7 +6,7 @@ inoremap jk <esc>
 set foldcolumn=0
 
 " build
-autocmd BufWritePost *.tpl execute '!~/browser-fe/common/build/tpl.py %'
+autocmd BufWritePost *.tpl execute '!~/kits/bin/tpl %'
 
 " update the ctags
 "map <leader>a :call vimproc#system("cd " . FindGitRoot(bufname("%")) . ";ctag -R .")
