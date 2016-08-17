@@ -81,6 +81,7 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search
 noremap <C-p> :MySearchFinder<CR> 
+noremap <C-f> :execute 'Unite file_rec/async'<CR> 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

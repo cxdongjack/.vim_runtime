@@ -9,11 +9,16 @@ function! VimuxGoToRoot()
   call _VimuxTmux("select-"._VimuxRunnerType()." -t ".g:VimuxRunnerIndex)
 endfunction
 
+function! VimuxGoToDirname()
+  call VimuxRunCommand("cd " . unite#util#path2directory(bufname("%")))
+  call _VimuxTmux("select-"._VimuxRunnerType()." -t ".g:VimuxRunnerIndex)
+endfunction
+
 " Run the current file with rspec
 map <Leader>vg :call VimuxGoToRoot()<CR>
 
 " Run the current file with rspec
-map <Leader>vc :call VimuxRunCommand("cd " . unite#util#path2directory(bufname("%")))<CR>
+map <Leader>vc :call VimuxGoToDirname()<CR>
 
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>

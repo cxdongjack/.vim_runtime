@@ -15,7 +15,7 @@ endtry' > ~/.vimrc
 # init tmux
 mv ~/.tmux.conf ~/.tmux.conf_back
 cp .tmux.conf ~/.tmux.conf
-cp .agignore ~/.tmux.conf
+cp .agignore ~/.agignore.conf
 
 # compile vimproc
 cd ~/.vim_runtime/sources_non_forked/vimproc.vim/
