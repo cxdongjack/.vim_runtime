@@ -1,13 +1,15 @@
 [alias]
-	s = status
-	ck = checkout
-	cb = checkout -b
-	cm = commit --verbose
-	cam = commit --verbose -a 
-	br = branch
-	ps = push
+    s = status
+    pl = pull --rebase
+    ps = push
+    ck = checkout
+    cb = checkout -b
+    b = branch
+    cam = commit -a -m
+    cma = commit -a -m
+    cm = commit -m
 [core]
 	editor = vim
-[user]
-	name = chenxiaodong
-	email = cxdongjack@163.com
+    excludesfile = ~/.gitignore
+[push]
+	default = simple

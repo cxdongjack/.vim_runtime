@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mv ~/.bash_profile ~/.bash_profile_back
 mv ~/.gitconfig ~/.gitconfig_back
 
