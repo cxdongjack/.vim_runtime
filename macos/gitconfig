@@ -8,6 +8,7 @@
     cam = commit -a -m
     cma = commit -a -m
     cm = commit -m
+    rollback  = "!git reset --hard origin/`git rev-parse --abbrev-ref HEAD`"
 [core]
 	editor = vim
     excludesfile = ~/.gitignore
