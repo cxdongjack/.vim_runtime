@@ -13,5 +13,15 @@ fi
 # __git_ps1 from git-prompt.sh supply by bash_completion
 PS1='\W$(__git_ps1 "\[\033[01;36m\](%s)\[\033[00m\]") \$ '
 
+# 提高/usr/local/bin的查询优先级
+export PATH=/usr/local/bin:$PATH 
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias cnpm="npm --registry=https://registry.npm.taobao.org"
+
+alias xnpm="npm --registry=http://registry.npm.pt.mi.com \
+--cache=$HOME/.npm/.cache/xnpm \
+--userconfig=$HOME/.xnpmrc \
+--scopes=@mi"
