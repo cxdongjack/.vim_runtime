@@ -43,6 +43,19 @@ call neobundle#local('~/.vim_runtime/sources_non_forked', {})
 " Add or remove your Bundles here:
 "NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'docunext/closetag.vim'
+" auto detect indent
+NeoBundle 'tpope/vim-sleuth'
+" support jsx
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+
+" Track the engine.
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'justinj/vim-react-snippets'
+
+" eslint
+NeoBundle 'scrooloose/syntastic'
 
 " Required:
 call neobundle#end()
@@ -119,3 +132,29 @@ autocmd FileType javascript noremap <buffer>  <leader>ft :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <leader>ft :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <leader>ft :call CSSBeautify()<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UltiSnips
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-jsx
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-jsx
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_jump = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
